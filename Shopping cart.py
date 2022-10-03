@@ -22,7 +22,7 @@ def shopping_carts(my_cart={}):
         my_cart[item] = {'item': item, 'ammount': ammount,
                          'cost': cost, 'price': price}
 
-        clear_output()
+        # clear_output()
         print("Your cart currently has these items:")
 
         for item, info, in my_cart.items():
@@ -34,12 +34,12 @@ def shopping_carts(my_cart={}):
             If you are finished enter c to check out. """).lower()
 
         while ask not in {'c', 'r', 'a'}:
-            clear_output()
+            # clear_output()
             ask = input(
                 'that is not a valid response. Please answer c, r or a.')
 
         if ask == 'r':
-            clear_output()
+            # clear_output()
             for item in my_cart.items():
                 my_cart.pop(input("What would you like to remove?").title())
                 ask = input(
@@ -61,7 +61,7 @@ def shopping_carts(my_cart={}):
         print(
             f"{info['ammount']} {info['item']}: {info['cost']} x {info['ammount']} = {info['price']}")
         print(f"Your total ammount is ${total}")
-        return my_cart
+        # return my_cart
 
 
 shopping_carts()
